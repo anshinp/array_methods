@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var products = [
+            { pid: 100, pName: 'apple', band: '5g', price: 120000, display: 'led' },
+            { pid: 101, pName: 'samsaung', band: '5g', price: 45000, display: 'led' },
+            { pid: 102, pName: 'blackberry', band: '4g', price: 50000, display: 'led' },
+            { pid: 103, pName: 'nokia', band: '3g', price: 1200, display: 'lcd' },
+            { pid: 104, pName: 'motorola', band: '4g', price: 10000, display: 'lcd' }
+        ];
+
+
+        let arry = products.map((p) => p.pName)
+        arry.forEach((n) => document.write(n))
+
+
+        let filtered = products.filter((item) => item.display == "lcd")
+        console.log(filtered);
+        filtered.forEach((p) => console.log(p.pName))
+
+        let filtered2 = products.filter((pr) => pr.band == "5g")
+        console.log(filtered2);
+        filtered2.forEach((r) => console.log(r.pName))
+
+
+        products.sort(function (a, b) {
+            return a.price - b.price;
+        });
+
+        console.log(products);      
+
+        products.sort(function(b,a){
+            return b.price - a.price
+        })
+        var costliestMobile=products[4].pName
+        console.log(products);      
+        console.log(costliestMobile);
+
+
+        var cheapestmobile=products[0].pName
+        console.log(cheapestmobile);
+
+        // document.write("<br>Q.<br>")
+        // for (let i = 0; i < products.length; i++) {
+        //     document.write(products[i].pName + "<br>")
+        // }
+
+        // document.write("<br>Q.<br>")
+
+        // for (let i = 0; i < products.length; i++){
+        //     if(products[i].display == "lcd"){
+        //         document.write(products[i].pName+"<br>")
+        //     }
+        // }
+
+
+        // document.write("<br>Q.<br>")
+        // for (let i = 0; i < products.length; i++){
+        //     if(products[i].band == "5g"){
+        //         document.write(products[i].pName+"<br>")
+        //     }
+        // }
+
+
+        // document.write("<br>Q.<br>")
+        // for (let i = 0; i < products.length; i++){
+        //     if(products[i].price>25000){
+        //         document.write(products[i].pName+"<br>")
+        //     }
+        // }
+
+
+        // document.write("<br>Q.<br>")
+        // for (let i = 0; i < products.length; i++){
+        //     if(products[i].price<10000){
+        //         document.write(products[i].pName+"<br>")
+        //     }
+        // }
+
+
+        // const filteredProducts = products.filter(function (product) {
+        //     return product.price > 30000;
+        // });
+
+        // document.write("<br>Q.<br>")
+        // filteredProducts.forEach(function (product) {
+        //     document.write(product.pName + "<br>");
+        // });
+
+    </script>
+</body>
+
+</html>
